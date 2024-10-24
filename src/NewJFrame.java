@@ -65,7 +65,7 @@ public class NewJFrame extends javax.swing.JFrame {
         comboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celcius", "Fahrenheit", "Reamur", "Kelvin" }));
 
         comboBox2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        comboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celcius", "Fahrenheit", "Reamur", "Kelvin" }));
+        comboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Reamur", "Kelvin", "Celcius" }));
 
         buttonKonversi.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         buttonKonversi.setText("Konversi");
