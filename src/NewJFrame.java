@@ -68,7 +68,7 @@ public class NewJFrame extends javax.swing.JFrame {
         comboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Reamur", "Kelvin", "Celcius" }));
 
         buttonKonversi.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        buttonKonversi.setText("Konversi");
+        buttonKonversi.setText("Konversi Suhu");
         buttonKonversi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonKonversiActionPerformed(evt);
