@@ -29,8 +29,9 @@ Aplikasi Konversi Suhu adalah program Java yang memungkinkan pengguna untuk meng
 - **Error Handling**: Menyediakan umpan balik yang informatif jika terjadi kesalahan input.
 
 ## Screenshot
-![5](https://github.com/user-attachments/assets/998ad538-2b4d-45b5-8c16-1988bc32bb4e)
-![5_](https://github.com/user-attachments/assets/bcbc5ea6-9baa-4376-9724-25e500438337)
+![5](https://github.com/user-attachments/assets/72ca07d4-3501-422c-93d2-d16f26b3c913)
+![5_](https://github.com/user-attachments/assets/6b1c1bfd-7fa3-499f-9598-cbbac7750071)
+
 
 ## Cara Menjalankan Program
 1. Pastikan Anda memiliki **Java Development Kit (JDK)** terinstal di sistem Anda.
