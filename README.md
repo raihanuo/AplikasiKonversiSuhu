@@ -1,6 +1,6 @@
 # Aplikasi Konversi Suhu
 
-Aplikasi Konversi Suhu adalah program Java yang memungkinkan pengguna untuk mengonversi suhu dari satu unit ke unit lainnya, seperti Celsius, Fahrenheit, Reamur, dan Kelvin.
+Aplikasi ini adalah program Java berbasis GUI yang memungkinkan pengguna untuk mengonversi suhu dari satu unit ke unit lainnya, seperti Celcius, Fahrenheit, Reamur, dan Kelvin.
 
 ## Identitas
 - Nama  : Muhammad Raihan
@@ -8,16 +8,15 @@ Aplikasi Konversi Suhu adalah program Java yang memungkinkan pengguna untuk meng
 - Kelas : 5B NonReg Banjarmasin
 
 ## Fitur
-- **Konversi Suhu**: Konversi suhu antar unit (Celsius, Fahrenheit, Reamur, Kelvin).
-- **Antarmuka Pengguna Grafis (GUI)**: Memudahkan pengguna dalam berinteraksi dengan aplikasi.
-- **Validasi Input**: Memastikan pengguna hanya memasukkan angka valid dan menangani kesalahan input dengan pesan yang sesuai.
+- **Validasi Input**: Program memvalidasi input agar hanya menerima angka. Jika pengguna memasukkan karakter yang tidak valid, akan muncul pesan kesalahan.
+- **Konversi Suhu**: Konversi suhu antar unit (Celcius, Fahrenheit, Reamur, Kelvin).
 
 ## Cara Menggunakan
-1. **Masukkan Suhu**: Ketikkan nilai suhu yang ingin Anda konversi di kolom input.
-2. **Pilih Unit Asal**: Gunakan dropdown untuk memilih unit suhu dari mana Anda ingin mengonversi.
-3. **Pilih Unit Tujuan**: Pilih unit suhu yang ingin Anda konversi ke.
-4. **Tekan Tombol Konversi**: Klik tombol "Konversi" untuk melihat hasilnya.
-5. **Hasil Konversi**: Hasil konversi akan ditampilkan di bawah tombol.
+1. Ketikkan nilai suhu yang ingin Anda konversi di kolom input.
+2. Gunakan dropdown untuk memilih unit suhu dari mana Anda ingin mengonversi.
+3. Pilih unit suhu yang ingin Anda konversi ke.
+4. Klik tombol "Konversi" untuk melihat hasilnya.
+5. Hasil konversi akan ditampilkan di bawah tombol.
 
 ## Teknologi yang Digunakan
 - **Java**: Bahasa pemrograman untuk mengembangkan aplikasi.
@@ -31,7 +30,6 @@ Aplikasi Konversi Suhu adalah program Java yang memungkinkan pengguna untuk meng
 ## Screenshot
 ![5](https://github.com/user-attachments/assets/72ca07d4-3501-422c-93d2-d16f26b3c913)
 ![5_](https://github.com/user-attachments/assets/6b1c1bfd-7fa3-499f-9598-cbbac7750071)
-
 
 ## Cara Menjalankan Program
 1. Pastikan Anda memiliki **Java Development Kit (JDK)** terinstal di sistem Anda.
