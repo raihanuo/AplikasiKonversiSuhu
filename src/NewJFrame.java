@@ -1,11 +1,10 @@
-
-import javax.swing.JOptionPane;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -147,75 +146,96 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonKonversiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonKonversiActionPerformed
+    private void konversi() {
+        // Memeriksa apakah text field untuk suhu kosong
         if (textFieldSuhu.getText().isEmpty()) {
+            // Menampilkan pesan kesalahan jika suhu belum dimasukkan
             JOptionPane.showMessageDialog(this, "Masukkan suhu terlebih dahulu!");
         } else {
+            // Mengambil input suhu dari text field dan mengonversinya ke tipe double
             double suhuInput = Double.parseDouble(textFieldSuhu.getText()),
-                hasil = 0;
-            String box1 = (String) comboBox1.getSelectedItem(),
-                box2 = (String) comboBox2.getSelectedItem(),
-                asal = box1,
-                tujuan = box2;
+                hasil = 0; // Inisialisasi variabel hasil untuk menyimpan hasil konversi
+            String box1 = (String) comboBox1.getSelectedItem(), // Mengambil pilihan unit asal dari comboBox1
+                box2 = (String) comboBox2.getSelectedItem(), // Mengambil pilihan unit tujuan dari comboBox2
+                asal = box1, // Menyimpan unit asal
+                tujuan = box2; // Menyimpan unit tujuan
 
+            // Memeriksa apakah radioButton untuk konversi terbalik dipilih
             if (radioButtonKe.isSelected()) {
-              asal = box2;
-              tujuan = box1;  
+                asal = box2; // Jika terbalik, unit asal menjadi unit tujuan
+                tujuan = box1; // dan unit tujuan menjadi unit asal
             }
 
+            // Jika unit asal sama dengan unit tujuan, hasilnya sama dengan input
             if (asal == tujuan) {
                 hasil = suhuInput;
-            } else if (asal.equals("Celcius")) {
+            } 
+            // Mengonversi dari Celcius ke unit tujuan yang dipilih
+            else if (asal.equals("Celcius")) {
                 if (tujuan.equals("Fahrenheit")) {
-                    hasil = (suhuInput * 9 / 5) + 32;
+                    hasil = (suhuInput * 9 / 5) + 32; // Konversi ke Fahrenheit
                 } else if (tujuan.equals("Reamur")) {
-                    hasil = suhuInput * 4 / 5;
+                    hasil = suhuInput * 4 / 5; // Konversi ke Reamur
                 } else if (tujuan.equals("Kelvin")) {
-                    hasil = suhuInput + 273.15;
+                    hasil = suhuInput + 273.15; // Konversi ke Kelvin
                 }
-            } else if (asal.equals("Fahrenheit")) {
+            } 
+            // Mengonversi dari Fahrenheit ke unit tujuan yang dipilih
+            else if (asal.equals("Fahrenheit")) {
                 if (tujuan.equals("Celcius")) {
-                    hasil = (suhuInput - 32) * 5 / 9;
+                    hasil = (suhuInput - 32) * 5 / 9; // Konversi ke Celcius
                 } else if (tujuan.equals("Reamur")) {
-                    hasil = (suhuInput - 32) * 4 / 9;
+                    hasil = (suhuInput - 32) * 4 / 9; // Konversi ke Reamur
                 } else if (tujuan.equals("Kelvin")) {
-                    hasil = (suhuInput - 32) * 5 / 9 + 273.15;
+                    hasil = (suhuInput - 32) * 5 / 9 + 273.15; // Konversi ke Kelvin
                 }
-            } else if (asal.equals("Reamur")) {
+            } 
+            // Mengonversi dari Reamur ke unit tujuan yang dipilih
+            else if (asal.equals("Reamur")) {
                 if (tujuan.equals("Celcius")) {
-                    hasil = suhuInput * 5 / 4;
+                    hasil = suhuInput * 5 / 4; // Konversi ke Celcius
                 } else if (tujuan.equals("Fahrenheit")) {
-                    hasil = (suhuInput * 9 / 4) + 32;
+                    hasil = (suhuInput * 9 / 4) + 32; // Konversi ke Fahrenheit
                 } else if (tujuan.equals("Kelvin")) {
-                    hasil = (suhuInput * 5 / 4) + 273.15;
+                    hasil = (suhuInput * 5 / 4) + 273.15; // Konversi ke Kelvin
                 }
-            } else if (asal.equals("Kelvin")) {
+            } 
+            // Mengonversi dari Kelvin ke unit tujuan yang dipilih
+            else if (asal.equals("Kelvin")) {
                 if (tujuan.equals("Celcius")) {
-                    hasil = suhuInput - 273.15;
+                    hasil = suhuInput - 273.15; // Konversi ke Celcius
                 } else if (tujuan.equals("Fahrenheit")) {
-                    hasil = (suhuInput - 273.15) * 9 / 5 + 32;
+                    hasil = (suhuInput - 273.15) * 9 / 5 + 32; // Konversi ke Fahrenheit
                 } else if (tujuan.equals("Reamur")) {
-                    hasil = (suhuInput - 273.15) * 4 / 5;
+                    hasil = (suhuInput - 273.15) * 4 / 5; // Konversi ke Reamur
                 }
             }
 
+            // Menampilkan hasil konversi pada label
             labelHasil.setText("Hasil : " + hasil);
         }
+    }
+    
+    private void buttonKonversiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonKonversiActionPerformed
+        konversi();
     }//GEN-LAST:event_buttonKonversiActionPerformed
 
     private void textFieldSuhuKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldSuhuKeyTyped
-        char c = evt.getKeyChar();
+        char c = evt.getKeyChar(); // Mendapatkan karakter yang diketik
+        // Memeriksa apakah karakter yang diketik bukan angka dan bukan tombol backspace
         if (!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE) {
-            evt.consume();
+            evt.consume(); // Menolak input karakter yang tidak valid
+            // Menampilkan pesan kesalahan jika karakter yang dimasukkan tidak valid
             JOptionPane.showMessageDialog(this, "Hanya bisa memasukkan angka!", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_textFieldSuhuKeyTyped
 
     private void textFieldSuhuKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldSuhuKeyReleased
+        // Memeriksa apakah text field kosong setelah karakter dilepaskan
         if (textFieldSuhu.getText().isEmpty()) {
-            labelHasil.setText("Hasil");
-        } else {
-            buttonKonversi.doClick();
+            labelHasil.setText("Hasil"); // Mengatur label hasil kembali ke keadaan awal
+        } else {           
+            konversi(); // Menghitung dan menampilkan hasil konversi suhu
         }
     }//GEN-LAST:event_textFieldSuhuKeyReleased
 
